@@ -239,7 +239,17 @@
 <p><code>单选框: &lt;input type=&quot;radio&quot; name=&quot;sex&quot; checked&gt;男 &lt;input type=&quot;radio&quot; name=&quot;sex&quot; disabled&gt;女</code></p>
 <h3 id="表单分组"><a href="#表单分组" class="headerlink" title="表单分组"></a>表单分组</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;fieldset&gt;</span><br><span class="line">       &lt;legend&gt;分组标题&lt;/legend&gt;</span><br><span class="line">       用户名:&lt;input type=&quot;text&quot;&gt;</span><br><span class="line">       &lt;br&gt; 密码: &lt;input type=&quot;password&quot;&gt;</span><br><span class="line">   &lt;/fieldset&gt;</span><br></pre></td></tr></table></figure>
 
-<p>样式为:<img src="/.com//%E8%A1%A8%E5%8D%95%E5%88%86%E7%BB%84.png" alt="表单分组"></p>
+<p>样式为:<img src="/2022/10/14/html-css/%E8%A1%A8%E5%8D%95%E5%88%86%E7%BB%84.png" alt="表单分组"></p>
+<h3 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;</span><br><span class="line">        姓名: &lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;</span><br><span class="line">        &lt;br&gt; 邮箱: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;</span><br><span class="line">        &lt;br&gt;</span><br><span class="line">        &lt;input type=&quot;submit&quot; value=&quot;注册&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;reset&quot; value=&quot;哈哈重置&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;普通按钮&quot;&gt;</span><br><span class="line">        &lt;br&gt;</span><br><span class="line">        &lt;!-- 图像按钮 --&gt;</span><br><span class="line">        &lt;input type=&quot;image&quot; src=&quot;表单分组.png&quot; width=&quot;150&quot; height=&quot;100&quot;&gt; ,</span><br><span class="line">        &lt;br&gt;</span><br><span class="line">        &lt;!-- 默认具有表单提交功能如果添加type=&quot;button&quot;则没有任何功能为普通按钮 --&gt;</span><br><span class="line">        &lt;button type=&quot;button&quot;&gt;button按钮&lt;/button&gt;</span><br><span class="line">    &lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;input type=&quot;submit&quot;&gt;</code>：表单提交按钮</p>
+<p><code>&lt;input type=&quot;reset&quot; &gt;</code>:表单重置按钮</p>
+<p><code>&lt;input type=&quot;button&quot; &gt;</code> 普通按钮</p>
+<p><code>&lt;input type=&quot;image&quot; src=&quot;表单分组.png&quot; width=&quot;150&quot; height=&quot;100&quot;&gt; </code>:图像按钮</p>
+<p><code>&lt;button type=&quot;button&quot;&gt;button按钮&lt;/button&gt;</code>:button按钮， 默认具有表单提交功能如果添加type&#x3D;”button”则没有任何功能为普通按钮 </p>
+<hr>
+
+<p>form标签的target属性为_blank为新窗口发送，不会让填写数据消失</p>
 </ol></ul>
       
     </div>
