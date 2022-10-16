@@ -95,13 +95,135 @@
       
         <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="html基础知识"><a href="#html基础知识" class="headerlink" title="html基础知识"></a>html基础知识</h2><h3 id="块元素和内联元素"><a href="#块元素和内联元素" class="headerlink" title="块元素和内联元素"></a>块元素和内联元素</h3><p>块元素:一般独占一行如:p h div等</p>
 <p>内联元素:只占用自身大小,不独占一行如span a img</p>
-<h2 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h2><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;h&gt;:标题标签一共有六级</span><br><span class="line"></span><br><span class="line">&lt;p&gt;:段落标签</span><br><span class="line"></span><br><span class="line">&lt;br&gt;:换行标签</span><br><span class="line"></span><br><span class="line">&lt;hr&gt;:水平线标签</span><br><span class="line"></span><br><span class="line">内联框架:&lt;iframe&gt;:可以向一个页面引入其他外部页面</span><br><span class="line">iframe常用属性:</span><br><span class="line">src:外部页面的地址可以使用相对地址,也可以使用绝对地址</span><br><span class="line">width,height:设置框架的宽度和高度</span><br><span class="line">name</span><br><span class="line">可以为内联框架指定一个名字</span><br><span class="line">可以将该属性值设置为超链接的target属性的值</span><br><span class="line">这样当点击超链接时，页面将会在相应的内联框架中打开</span><br><span class="line">内联框架中的内容不会被搜索引擎所检索，所以开发中尽量不要使用内联框架</span><br><span class="line">https://www.w3school.com.cn/html/html<span class="built_in">_</span>iframe.asp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;a&gt;:超链接</span><br><span class="line">常用属性:</span><br><span class="line">	href:跳转的地址,可以使用<span class="params">#</span>id属性值当作锚点这样就可以跳转到页面的指定位置,mailto:来创建一个发送邮件的超链接</span><br><span class="line">	target:指定在哪个窗口打开链接 可选值 <span class="built_in">_</span>self默认值在当			前窗口打开链接   <span class="built_in">_</span>blank在新窗口打开  内联框架			&lt;iframe&gt;的name属性值 在框架中打开</span><br><span class="line">	</span><br><span class="line">&lt;img&gt;图片标签:引入外部图片</span><br><span class="line">	常用属性: src:指向外部图片的路径</span><br><span class="line">			alt:指定一个在图片无法加载时对图片的描述</span><br><span class="line">				搜索引擎主要通过该属性来识别图片的内容</span><br><span class="line">				如果不写该属性则搜索引擎会对图片进行收录</span><br><span class="line">				width,height:图片的高度和宽度</span><br><span class="line">				</span><br></pre></td></tr></table></figure>
+<h2 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h2><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;h&gt;:标题标签一共有六级</span><br><span class="line"></span><br><span class="line">&lt;p&gt;:段落标签</span><br><span class="line"></span><br><span class="line">&lt;br&gt;:换行标签</span><br><span class="line"></span><br><span class="line">&lt;hr&gt;:水平线标签</span><br><span class="line"></span><br><span class="line">内联框架:&lt;iframe&gt;:可以向一个页面引入其他外部页面</span><br><span class="line">iframe常用属性:</span><br><span class="line">src:外部页面的地址可以使用相对地址,也可以使用绝对地址</span><br><span class="line">width,height:设置框架的宽度和高度</span><br><span class="line">name</span><br><span class="line">可以为内联框架指定一个名字</span><br><span class="line">可以将该属性值设置为超链接的target属性的值</span><br><span class="line">这样当点击超链接时，页面将会在相应的内联框架中打开</span><br><span class="line">内联框架中的内容不会被搜索引擎所检索，所以开发中尽量不要使用内联框架</span><br><span class="line">https://www.w3school.com.cn/html/html<span class="built_in">_</span>iframe.asp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;a&gt;:超链接</span><br><span class="line">常用属性:</span><br><span class="line">	href:跳转的地址,可以使用<span class="params">#</span>id属性值当作锚点这样就可以跳转到页面的指定位置,</span><br><span class="line">	mailto:来创建一个发送邮件的超链接</span><br><span class="line">	target:指定在哪个窗口打开链接 可选值 <span class="built_in">_</span>self默认值在当窗口打开链接</span><br><span class="line">    <span class="built_in">_</span>blank在新窗口打开  </span><br><span class="line">    内联框架&lt;iframe&gt;的name属性值 在框架中打开</span><br><span class="line">	&lt;img&gt;图片标签:引入外部图片</span><br><span class="line">	常用属性: src:指向外部图片的路径</span><br><span class="line">			alt:指定一个在图片无法加载时对图片的描述</span><br><span class="line">				搜索引擎主要通过该属性来识别图片的内容</span><br><span class="line">				如果不写该属性则搜索引擎会对图片进行收录</span><br><span class="line">				width,height:图片的高度和宽度</span><br><span class="line">			title:对属性的描述</span><br><span class="line">&lt;span&gt;: 没有固定的格式表现。当对它应用css样式时，它才会产生视觉上的变化 如:</span><br><span class="line">		&lt;span style=&quot;font-size: 32px; margin: 21px 0&quot;&gt;这是顶级标题吗？&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">&lt;i&gt;:斜体  &lt;b&gt;:加粗 &lt;u&gt;:下划线</span><br></pre></td></tr></table></figure>
 
 
 
 <h2 id="常用实体"><a href="#常用实体" class="headerlink" title="常用实体"></a>常用实体</h2><p>html中一些特殊符号不能使用 需要实体(转义字符)来代替</p>
 <p>常用实体空格<code>&amp;nbsp;</code>,       &lt;<code>&amp;lt;</code>,     &gt;<code>&amp;gt;</code>,版权符号 &amp;copy;<code>&amp;copy;</code> </p>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li&gt;豆浆&lt;/li&gt;  </span><br><span class="line">&lt;li&gt;油条&lt;/li&gt;  </span><br><span class="line">&lt;li&gt;豆汁&lt;/li&gt; </span><br><span class="line">&lt;li&gt;焦圈&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
 
+<p>样式如下:</p>
+<ul>
+<li>豆浆</li>  
+<li>油条</li>  
+<li>豆汁</li> 
+<li>焦圈</li>
+</ul>
+`<ul>`常用属性：
+
+<p>​				type: </p>
+<p>​						disc实心圆点 </p>
+<p>​						cricle空心圆点  </p>
+<p>​						none 无样式</p>
+<p>​						square实心方块</p>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">&lt;li&gt;沿着条路走到头&lt;/li&gt;</span><br><span class="line">&lt;li&gt;右转&lt;/li&gt;</span><br><span class="line">&lt;li&gt;直行穿过第一个十字路口&lt;/li&gt;</span><br><span class="line">&lt;li&gt;在第三个十字路口处左转&lt;/li&gt;</span><br><span class="line">&lt;li&gt;继续走 300 米，学校就在你的右手边&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<p>样式:</p>
+<ol>
+<li>沿着条路走到头</li>
+<li>右转</li>
+<li>直行穿过第一个十字路口</li>
+<li>在第三个十字路口处左转</li>
+<li>继续走 300 米，学校就在你的右手边</li>
+</ol>
+​	`<ol>`常用属性:
+
+<p>​		type:有序列表形式 可以写数字或字母如:1,a,A</p>
+<p>​		start:数字从第几个开始</p>
+<h2 id="自定义列表"><a href="#自定义列表" class="headerlink" title="自定义列表"></a>自定义列表</h2><p>dl:定义列表              dt:定义术语    dd定义描述  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dt</span>&gt;</span>帮助中心<span class="tag">&lt;/<span class="name">dt</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">dd</span>&gt;</span>账户管理<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dd</span>&gt;</span>账户管理1<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dd</span>&gt;</span>账户管理2<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>h1{这是一级标题}  :快速创建有文本的标签</p>
+<h2 id="文本常用标签"><a href="#文本常用标签" class="headerlink" title="文本常用标签"></a>文本常用标签</h2><p><code>&lt;b&gt;加粗文本&lt;b/&gt;</code> :仅加粗显示</p>
+<p><code>&lt;strong&gt;加粗文本&lt;/strong&gt;</code>:语义强化,表示该文本比较重要</p>
+<p><code>&lt;i&gt;倾斜文本&lt;/i&gt;</code>:字体倾斜</p>
+<p><code>&lt;em&gt;倾斜文本&lt;/em&gt;</code>：倾斜,加强语气</p>
+<p><code>&lt;s&gt;删除线文本&lt;/s&gt;</code>：html5不支持s标签建议使用del</p>
+<p><code>&lt;del&gt;删除线文本&lt;/del&gt;</code>:</p>
+<p><code>&lt;u&gt;下划线文本&lt;/u&gt;</code></p>
+<p><code>&lt;sup&gt;上角标文本&lt;/sup&gt;</code></p>
+<p><code>&lt;sub&gt;下角标文本&lt;/sub&gt;</code></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>格式:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line"> &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;th&gt;</code>加粗并居中显示一般作为表头</p>
+<p>table修饰属性: </p>
+<p>​		border 边框线条粗细</p>
+<p>​		cellspacing:单元格之间的距离</p>
+<p>​		cellpadding:单元格边框和文本之间的距离</p>
+<p>​		align: 表格对齐方式    left,right,center</p>
+<p>​		bgcolor:表格背景颜色</p>
+<p>​		bordercolor:表格边框颜色</p>
+<p>tr修饰属性:</p>
+<p>​		height:注意表格的总高度不变</p>
+<p>​		bgcolor:表格背景颜色 </p>
+<p>​		align:设置水平对齐方式 </p>
+<p>​		valign:设置垂直对齐方式  </p>
+<p>​					top顶部对齐  </p>
+<p>​					middle居中对齐  </p>
+<p>​					bottom底部对齐</p>
+<p>td修饰属性:</p>
+<p>​		width,height</p>
+<p>​		bgcolor</p>
+<p>​		align	</p>
+<p>​		valign</p>
+<h3 id="表格合并"><a href="#表格合并" class="headerlink" title="表格合并"></a>表格合并</h3><p>代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  &lt;td&gt;&lt;/td&gt;</span><br><span class="line">            &lt;td rowspan=&quot;3&quot;&gt;&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td colspan=&quot;2&quot;&gt;&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">    &lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<table width="600" height="400" border="1" cellspacing="0">
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+              <td></td>
+            <td rowspan="3"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">   <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">bgcolor</span>=<span class="string">&quot;skyblue&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">&quot;4&quot;</span> <span class="attr">bgcolor</span>=<span class="string">&quot;skyblue&quot;</span>&gt;</span>下午<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">bgcolor</span>=<span class="string">&quot;skyblue&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">bgcolor</span>=<span class="string">&quot;skyblue&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">bgcolor</span>=<span class="string">&quot;skyblue&quot;</span>&gt;</span>晚自习<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">&quot;5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="表格标题和结构分组"><a href="#表格标题和结构分组" class="headerlink" title="表格标题和结构分组"></a>表格标题和结构分组</h3><p><code>&lt;caption&gt;标题&lt;/caption&gt;一般放在table里第一个tr标签上</code></p>
+<p>thead:表格头</p>
+<p>tbody:表格体</p>
+<p>tfoot:表格脚</p>
+<p>列分组: colgroup标签 span几个为一组</p>
+<h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><h2 id><a href="#" class="headerlink" title></a></h2><p>常用表单:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">文本框</span><br><span class="line">&lt;input type=&quot;text&quot;&gt;</span><br><span class="line">密码框</span><br><span class="line">&lt;input type=&quot;password&quot;&gt;</span><br><span class="line">多行文本框  cols指定列数 rows指定行数</span><br><span class="line">&lt;textarea cols=&quot;10&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</ol></ul>
       
     </div>
     <footer class="article-footer">
