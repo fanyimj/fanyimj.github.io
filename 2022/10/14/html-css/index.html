@@ -463,8 +463,8 @@
 <li>豆汁</li> 
 <li>焦圈</li>
 </ul>
-`<ul>`常用属性：
 
+<p><code>&lt;ul&gt;</code>常用属性：</p>
 <p>​				type: </p>
 <p>​						disc实心圆点 </p>
 <p>​						cricle空心圆点  </p>
@@ -480,8 +480,8 @@
 <li>在第三个十字路口处左转</li>
 <li>继续走 300 米，学校就在你的右手边</li>
 </ol>
-​	`<ol>`常用属性:
 
+<p>​	<code>&lt;ol&gt;</code>常用属性:</p>
 <p>​		type:有序列表形式 可以写数字或字母如:1,a,A</p>
 <p>​		start:数字从第几个开始</p>
 <h2 id="自定义列表"><a href="#自定义列表" class="headerlink" title="自定义列表"></a>自定义列表</h2><p>dl:定义列表              dt:定义术语    dd定义描述  </p>
@@ -562,6 +562,7 @@
 <p><code>&lt;button type=&quot;button&quot;&gt;button按钮&lt;/button&gt;</code>:button按钮， 默认具有表单提交功能如果添加type&#x3D;”button”则没有任何功能为普通按钮 </p>
 <hr>
 
+
 <p>form标签的target属性为_blank为新窗口发送，不会让填写数据消失</p>
 <h2 id="其他常用标签"><a href="#其他常用标签" class="headerlink" title="其他常用标签"></a>其他常用标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">    床前明月光,</span><br><span class="line">    疑是地上霜.</span><br><span class="line">    举头望明月,</span><br><span class="line">    低头思故乡.</span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">以原本格式输出</span><br></pre></td></tr></table></figure>
 
@@ -585,7 +586,55 @@
 <h2 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h2><p><img src="/2022/10/14/html-css/%E9%80%89%E6%8B%A9%E5%99%A8.png" class="lazyload placeholder" data-srcset="/2022/10/14/html-css/%E9%80%89%E6%8B%A9%E5%99%A8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="选择器"></p>
 <h3 id="简单选择器"><a href="#简单选择器" class="headerlink" title="简单选择器"></a>简单选择器</h3><p><img src="/2022/10/14/html-css/%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8.png" class="lazyload placeholder" data-srcset="/2022/10/14/html-css/%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="简单选择器"></p>
 <p>注意给标签添加class属性时可以用空格添加多个</p>
-</ol></ul>
+<h3 id="组合选择器"><a href="#组合选择器" class="headerlink" title="组合选择器"></a>组合选择器</h3><p><img src="/2022/10/14/html-css/%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8.png" class="lazyload placeholder" data-srcset="/2022/10/14/html-css/%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="组合选择器"></p>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p><img src="/2022/10/14/html-css/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8.png" class="lazyload placeholder" data-srcset="/2022/10/14/html-css/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="伪类选择器"></p>
+<p>伪类选择器注意事项:</p>
+<ul>
+<li>冒号和后面的鼠标行为没有任何空格,必须连接在一起</li>
+<li>四个伪类选择器必须按照(:link,:visited:hover,:active)否则浏览器样式部分不能实现</li>
+<li>伪类选择器全部一起使用的情况主要是应用在超链接上,偶尔也会独立使用在其他标签上(<strong>使用在其他标签上只能实现active激活瞬间和hover鼠标悬停效果</strong>)</li>
+</ul>
+<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><p>通过伪元素选择可以设置元素指定部分的样式，主要设置元素文本的首字母,首行样式或实在元素内容前或之后插入其他内容</p>
+<ul>
+<li>div的第一个字符添加样式  #div1::first-letter</li>
+<li>向div的第一行文本添加样式 #div2::first-line</li>
+<li>向前添加内容 必须配合content使用  #div3::before</li>
+<li>向后添加内容 #div3::after</li>
+<li>鼠标选择文本时的样式 #div4::selection</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">background-color</span>: red;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/*div的第一个字符添加样式*/</span></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#div1</span><span class="selector-pseudo">::first-letter</span>&#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-size</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/*向div的第一行文本添加样式*/</span></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#div2</span><span class="selector-pseudo">::first-line</span>&#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">color</span>: rebeccapurple;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-size</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/*向前添加内容 必须配合content使用*/</span></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#div3</span><span class="selector-pseudo">::before</span>&#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">content</span>: <span class="string">&quot;我是向前添加&quot;</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-size</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/*向后添加内容*/</span></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#div3</span><span class="selector-pseudo">::after</span>&#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">content</span>: <span class="string">&quot;我是向后添加&quot;</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/*鼠标选择文本时的样式*/</span></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#div4</span><span class="selector-pseudo">::selection</span>&#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">color</span>: seashell;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">background-color</span>: skyblue;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span>&gt;</span>我是div,实现元素内的第一个字符添加样式声明<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div2&quot;</span>&gt;</span>我是div,实现元素内的第一个字符添加样式声明<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div3&quot;</span>&gt;</span>我是div,实现元素内的第一个字符添加样式声明<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div4&quot;</span>&gt;</span>我是div,实现元素内的第一个字符添加样式声明<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><img src="/2022/10/14/html-css/%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8.png" class="lazyload placeholder" data-srcset="/2022/10/14/html-css/%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="属性选择器"></p>
+<h2 id="文本颜色和大小写"><a href="#文本颜色和大小写" class="headerlink" title="文本颜色和大小写"></a>文本颜色和大小写</h2><p>定义文本颜色: color:blue</p>
+<p>文本大&#x2F;小写:text-transform:uppercase&#x2F;lowsercase</p>
+<p>所有单词的首字母大写：text-transform: capitalize;</p>
+<h2 id="文本对齐和文本间距"><a href="#文本对齐和文本间距" class="headerlink" title="文本对齐和文本间距"></a>文本对齐和文本间距</h2><p><strong>水平对齐</strong></p>
+<p>text-align: <strong>属性值</strong>：</p>
+<p>​		<strong>left</strong>：左对齐</p>
+<p>​		<strong>right</strong>：右对齐</p>
+<p>​		<strong>center</strong>:居中</p>
+<p>​		<strong>justify</strong>:两端对齐</p>
+<p><strong>垂直对齐：</strong></p>
+<p>​	<img src="/2022/10/14/html-css/%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90.png" class="lazyload placeholder" data-srcset="/2022/10/14/html-css/%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p>text-indent: 2em;      <strong>首行缩进</strong>   一般为2em</p>
+<p>line-height:   <strong>设置行高</strong></p>
+<p><img src="/2022/10/14/html-css/%E8%A1%8C%E9%AB%98.png" class="lazyload placeholder" data-srcset="/2022/10/14/html-css/%E8%A1%8C%E9%AB%98.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="行高"></p>
+<p>word-spacing: 20px;     <strong>用于指定文本中单词的间距,只对英文有效</strong></p>
+<p>letter-spacing: 5px;     <strong>文本间隔</strong> </p>
+<p>white-space: nowrap;   <strong>不会换行直到遇到br 标签为止</strong></p>
+<h2 id="文本修饰"><a href="#文本修饰" class="headerlink" title="文本修饰"></a>文本修饰</h2><p>text-decoration-line:  <strong>overline&#x2F;line-through&#x2F;underline</strong>   上划线&#x2F;删除线&#x2F;下划线</p>
+<p>text-decoration-color: <strong>线条颜色</strong></p>
+<p>text-decoration-style: <strong>dashed&#x2F;dotted&#x2F;wavy&#x2F;solid&#x2F;double</strong>    <strong>虚线&#x2F;重点线&#x2F;波浪线&#x2F;虚线&#x2F;双实线</strong></p>
+<p>text-decoration-thickness： <strong>线条粗细</strong></p>
+<p>也可以一起写 text-decoration: red dashed underline 10px</p>
+<h2 id="字体和字号"><a href="#字体和字号" class="headerlink" title="字体和字号"></a>字体和字号</h2><p>font-family:     <strong>设置字体样式</strong></p>
+<p>font-size:    <strong>设置字体大小</strong></p>
+<h2 id="字体风格和样式"><a href="#字体风格和样式" class="headerlink" title="字体风格和样式"></a>字体风格和样式</h2><p>font-weight:   <strong>设置文本粗细</strong></p>
+<p><img src="/2022/10/14/html-css/%E6%96%87%E6%9C%AC%E7%B2%97%E7%BB%86.png" class="lazyload placeholder" data-srcset="/2022/10/14/html-css/%E6%96%87%E6%9C%AC%E7%B2%97%E7%BB%86.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="文本粗细"></p>
+<p>font-style:  <strong>italic&#x2F;normal</strong>   倾斜&#x2F;正常 </p>
+
       </div>
       <div class="post-tags-categories">
         
